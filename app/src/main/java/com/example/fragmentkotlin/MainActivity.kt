@@ -16,5 +16,7 @@ class MainActivity : AppCompatActivity(), Fragment1.Communication {
 
     override fun send(nom: String?) {
         binding.activityTextView.text = nom
+        val fragment2 = supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as Fragment2
+        fragment2.received(nom)
     }
 }
